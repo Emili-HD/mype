@@ -20,15 +20,14 @@ export default {
     };
   },
 
-  created() {
-    WPService.getSinglePage(11)
-      .then((response) => {
-        this.pages = response.data;
-        //console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  async created() {
+    try {
+      const pageId = 11 // ID de la página de servicios
+      const pageResponse = await WPService.getSinglePage(pageId)
+      this.pages = pageResponse.data
+    } catch (error) {
+      console.error(error)
+    }
   },
 
 };

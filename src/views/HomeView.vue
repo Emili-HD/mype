@@ -80,7 +80,7 @@ export default {
 
   async created() {
     try {
-      const pageId = 2 // O la ID que corresponda
+      const pageId = 2 // ID de la página de inicio
       const pageResponse = await WPService.getSinglePage(pageId)
       this.pages = pageResponse.data
     } catch (error) {

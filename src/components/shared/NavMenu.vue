@@ -27,7 +27,7 @@ export default {
 
   async created() {
     try {
-      const menuId = 3; // O la ID que corresponda
+      const menuId = 3; // ID del menú principal
       const pageResponse = await WPService.getMenu(menuId);
       this.menu = pageResponse.data;
     } catch (error) {
