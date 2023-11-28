@@ -1,0 +1,62 @@
+header {
+    line-height: 1.5;
+    max-height: 100vh;
+
+    .logo {
+        text-align: center;
+    }
+
+    nav {
+        a {
+            display: inline-block;
+            padding: 0 1rem;
+            font-size: .75rem;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 1px;
+
+
+            &:first-of-type {
+                border: 0;
+            }
+
+            &.router-link-exact-active {
+                color: var(--color-text);
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        place-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: var(--header-height);
+        width: 100vw;
+        position: fixed;
+        z-index: 9999;
+
+        .wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            place-items: flex-start;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+    }
+
+
+    nav {
+        text-align: right;
+    }
+}

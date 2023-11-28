@@ -1,0 +1,9 @@
+.fotov, .strk, .filled {
+    fill: none;
+    stroke: var(--color-svg-full);
+    stroke-width: var(--stroke-width-active);
+    stroke-miterlimit:10;
+}
+.filled {
+    fill: var(--color-svg-full);
+}

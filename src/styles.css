@@ -1,0 +1,784 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@300;400;500&display=swap");
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #f0f0f0;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #505050;
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --gradient-body: linear-gradient(135deg, rgb(12, 18, 33) 0%, rgb(77, 92, 186) 50.15%, rgb(8, 11, 20) 100%);
+  --color-background: #091922;
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+  --color-heading: #f0f0f0;
+  --color-text: #f0f0f0;
+  --section-gap: 160px;
+  --header-height: 120px;
+  /* svg control */
+  --color-svg-full: #3b454c;
+  --color-svg: #3b454c5c;
+  --color-fill: #3b454c0d;
+  --strokew: 0.1px;
+  --stroke-width-active: 0.4px;
+}
+
+#mype, #logo {
+  transition: all 0.5s ease;
+}
+
+#mype.about,
+#logo.about path {
+  --strokew: 0.4px !important;
+  --color-svg: #00ffff24;
+}
+
+.gr12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.row > * {
+  padding-left: 0rem;
+  padding-right: 0rem;
+  box-sizing: border-box;
+}
+
+.column {
+  flex: 1 0 0;
+  width: auto;
+}
+
+.sm-col-1 {
+  flex: 0 0 12.5vw;
+  min-width: 12.5vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-1 {
+    width: 12.5vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-1 {
+    flex: 0 0 12.5vw;
+    min-width: 12.5vw;
+  }
+}
+
+.column-offset-1 {
+  margin-left: calc(100vw / 8 * 1);
+}
+
+.md-col-offset-1 {
+  margin-left: calc(100vw / 8 * 1);
+}
+
+.column-width-1 {
+  width: calc(100vw / 8 * 1);
+}
+
+.sm-col-2 {
+  flex: 0 0 25vw;
+  min-width: 25vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-2 {
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-2 {
+    flex: 0 0 25vw;
+    min-width: 25vw;
+  }
+}
+
+.column-offset-2 {
+  margin-left: calc(100vw / 8 * 2);
+}
+
+.md-col-offset-2 {
+  margin-left: calc(100vw / 8 * 2);
+}
+
+.column-width-2 {
+  width: calc(100vw / 8 * 2);
+}
+
+.sm-col-3 {
+  flex: 0 0 37.5vw;
+  min-width: 37.5vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-3 {
+    width: 37.5vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-3 {
+    flex: 0 0 37.5vw;
+    min-width: 37.5vw;
+  }
+}
+
+.column-offset-3 {
+  margin-left: calc(100vw / 8 * 3);
+}
+
+.md-col-offset-3 {
+  margin-left: calc(100vw / 8 * 3);
+}
+
+.column-width-3 {
+  width: calc(100vw / 8 * 3);
+}
+
+.sm-col-4 {
+  flex: 0 0 50vw;
+  min-width: 50vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-4 {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-4 {
+    flex: 0 0 50vw;
+    min-width: 50vw;
+  }
+}
+
+.column-offset-4 {
+  margin-left: calc(100vw / 8 * 4);
+}
+
+.md-col-offset-4 {
+  margin-left: calc(100vw / 8 * 4);
+}
+
+.column-width-4 {
+  width: calc(100vw / 8 * 4);
+}
+
+.sm-col-5 {
+  flex: 0 0 62.5vw;
+  min-width: 62.5vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-5 {
+    width: 62.5vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-5 {
+    flex: 0 0 62.5vw;
+    min-width: 62.5vw;
+  }
+}
+
+.column-offset-5 {
+  margin-left: calc(100vw / 8 * 5);
+}
+
+.md-col-offset-5 {
+  margin-left: calc(100vw / 8 * 5);
+}
+
+.column-width-5 {
+  width: calc(100vw / 8 * 5);
+}
+
+.sm-col-6 {
+  flex: 0 0 75vw;
+  min-width: 75vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-6 {
+    width: 75vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-6 {
+    flex: 0 0 75vw;
+    min-width: 75vw;
+  }
+}
+
+.column-offset-6 {
+  margin-left: calc(100vw / 8 * 6);
+}
+
+.md-col-offset-6 {
+  margin-left: calc(100vw / 8 * 6);
+}
+
+.column-width-6 {
+  width: calc(100vw / 8 * 6);
+}
+
+.sm-col-7 {
+  flex: 0 0 87.5vw;
+  min-width: 87.5vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-7 {
+    width: 87.5vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-7 {
+    flex: 0 0 87.5vw;
+    min-width: 87.5vw;
+  }
+}
+
+.column-offset-7 {
+  margin-left: calc(100vw / 8 * 7);
+}
+
+.md-col-offset-7 {
+  margin-left: calc(100vw / 8 * 7);
+}
+
+.column-width-7 {
+  width: calc(100vw / 8 * 7);
+}
+
+.sm-col-8 {
+  flex: 0 0 100vw;
+  min-width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  .md-col-8 {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .lg-col-8 {
+    flex: 0 0 100vw;
+    min-width: 100vw;
+  }
+}
+
+.column-offset-8 {
+  margin-left: calc(100vw / 8 * 8);
+}
+
+.md-col-offset-8 {
+  margin-left: calc(100vw / 8 * 8);
+}
+
+.column-width-8 {
+  width: calc(100vw / 8 * 8);
+}
+
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/**
+ * Typography
+ * =================================
+ * - Base
+ * - Paragraphs
+ * - Headings
+ * - Type sizes
+ * - Misc
+ * - Utilities
+ *
+ * Body font size, leadings etc have been set in _variables.scss
+ *
+ * See http://modularscale.com for
+ *
+ */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+  line-height: 1.667rem;
+  color: var(--color-text);
+  font-feature-settings: "liga", "dlig", "hist";
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
+}
+
+/**
+ * Paragraphs
+ */
+p {
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Rubik", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.667rem;
+  text-rendering: optimizelegibility;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.25rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.wellcome-title {
+  font-size: 5.1vw;
+  background: linear-gradient(45deg, #09009f, #00ff95 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Miscellaneous
+ */
+strong,
+b {
+  font-weight: 800;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  padding-left: 10px;
+  margin: 1.5rem;
+  border-left: 4px solid #cccccc;
+}
+blockquote p {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+blockquote small {
+  display: block;
+  color: #b3b3b3;
+}
+blockquote small::before {
+  content: "— ";
+}
+
+q::before, q::after,
+blockquote::before,
+blockquote::after {
+  content: "";
+}
+
+cite {
+  font-style: normal;
+}
+
+dfn {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * Utilities
+ */
+.text-centre,
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/**
+ * Links
+ */
+a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.dark #site-header path {
+  fill: var(--vt-c-black);
+  transition: all 0.5s;
+}
+.dark #site-header .nav_menu_item {
+  color: var(--vt-c-black);
+}
+
+.fotov, .strk, .filled {
+  fill: none;
+  stroke: var(--color-svg-full);
+  stroke-width: var(--stroke-width-active);
+  stroke-miterlimit: 10;
+}
+
+.filled {
+  fill: var(--color-svg-full);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Arial -apple-system, BlinkMacSystemFont, "Droid Sans", Inter, sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  color: var(--vt-c-black);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--vt-c-black-mute);
+  }
+}
+#app {
+  max-width: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  font-weight: normal;
+}
+
+.site-main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.circuit {
+  width: 70vw;
+  position: fixed;
+  z-index: -1;
+}
+.circuit svg {
+  max-width: 100%;
+}
+
+svg.fons {
+  transform: translate(-46%, -52.4%);
+  transition: all 2s cubic-bezier(0.73, 0.02, 0.3, 0.97);
+}
+svg.fons #logo path {
+  --color-fill: rgba(255, 255, 255, 0);
+}
+
+header .logo {
+  text-align: center;
+  /* transform: translate(15.3vw, 43.9vh) scale(3.25);
+  transition: all .75s cubic-bezier(0.73, 0.02, 0.3, 0.97); */
+  /* &.in--top {
+      transform: translate(0, 0) scale(1);
+      transition: all .75s cubic-bezier(0.73, 0.02, 0.3, 0.97);
+  } */
+}
+
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+header .logo {
+  text-align: center;
+}
+header nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+header nav a:first-of-type {
+  border: 0;
+}
+header nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+header nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: var(--header-height);
+    width: 100vw;
+    position: fixed;
+    z-index: 9999;
+  }
+  header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  nav {
+    text-align: right;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#smooth-content {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.panel {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.panel#wellcome {
+  justify-content: flex-end;
+  padding-bottom: 5vh;
+}
+.panel__wrapper {
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.1294117647);
+  backdrop-filter: blur(20px);
+  padding: 4rem;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 2rem;
+  gap: 4rem;
+}
+.panel__wrapper__sector, .panel__wrapper__image {
+  width: 50%;
+}
+.panel:nth-of-type(even) .panel__wrapper {
+  flex-direction: row-reverse;
+}
+.panel:nth-of-type(even) .panel__wrapper__sector {
+  padding: 0 0 0 25%;
+}
